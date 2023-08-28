@@ -6,11 +6,11 @@
     src: templates/template.txt.j2
     dest: /tmp/template.txt
 
-- name: get the content of template
-  ansible.builtin.command:
-    cmd: cat /tmp/template.txt
+- name: slurp the content of template
+  ansible.builtin.slurp:
+    src: /tmp/template.txt
   register: output
 
 - name: output
   ansible.builtin.debug:
-    msg: "{{ output.stdout }}"
+    msg: "{{ output.content | b64decode }}"
