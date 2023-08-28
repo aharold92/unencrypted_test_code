@@ -1,0 +1,6 @@
+---
+# tasks file for test_role1
+
+- name: spit out some values
+  ansible.builtin.debug:
+    msg: "{{ default_val1 }}"

@@ -1,0 +1,4 @@
+---
+# defaults file for test_role1
+
+default_val1: "hello from role 1"

@@ -1,0 +1,16 @@
+---
+# tasks file for test_role2
+
+- name: template a file
+  ansible.builtin.template:
+    src: templates/template.txt.j2
+    dest: /tmp/template.txt
+
+- name: get the content of template
+  ansible.builtin.command:
+    cmd: cat /tmp/template.txt
+  register: output
+
+- name: output
+  ansible.builtin.debug:
+    msg: "{{ output.stdout }}"

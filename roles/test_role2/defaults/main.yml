@@ -1,0 +1,4 @@
+---
+# defaults file for test_role2
+
+role2: default_var_for_role_2

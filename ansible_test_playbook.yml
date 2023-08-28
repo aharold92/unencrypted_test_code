@@ -1,0 +1,9 @@
+- name: controller of controllers
+  hosts: all
+  become: true
+
+  tasks:
+
+    - name: run the first role
+      ansible.builtin.import_role:
+        name: test_role1
